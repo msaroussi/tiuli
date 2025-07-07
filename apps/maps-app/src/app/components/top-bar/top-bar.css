@@ -1,0 +1,75 @@
+.top-panel {
+  height: 100%;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.top-panel .p-panel-content {
+  border: none;
+  padding: 0;
+  border-radius: 8px;
+}
+
+.top-content {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 8px 16px;
+  height: auto;
+}
+
+.top-content h3 {
+  margin: 0;
+  color: #333;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.controls {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+/* Toolbar button styling to match left-bar but accommodate text */
+.toolbar-btn {
+  height: 40px !important;
+  min-width: auto !important;
+  padding: 0 16px !important;
+  border-radius: 6px !important;
+  margin: 2px 0 !important;
+  color: #333 !important;
+  background: #f8f9fa !important;
+  border: 1px solid #e9ecef !important;
+  transition: all 0.2s ease !important;
+  font-size: 13px !important;
+  font-weight: 500 !important;
+}
+
+.toolbar-btn:hover {
+  background: #f5f5f5 !important;
+  border-color: #ddd !important;
+  color: #2196F3 !important;
+}
+
+.toolbar-btn:active,
+.toolbar-btn.p-button-text:not(:disabled):active {
+  background: #e3f2fd !important;
+  border-color: #2196F3 !important;
+  color: #1976D2 !important;
+}
+
+.toolbar-btn:focus {
+  box-shadow: 0 0 0 2px rgba(33, 150, 243, 0.2) !important;
+}
+
+.toolbar-btn .pi {
+  font-size: 16px;
+}
+.toolbar-title {
+  margin-right: 1rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #333;
+}

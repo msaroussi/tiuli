@@ -1,0 +1,58 @@
+<p-panel [toggleable]="false" class="right-panel" header="">
+    <div class="right-content">
+      <h4>Map Information</h4>
+      <p>Current Location: New York, NY</p>
+      <p>Zoom Level: 10</p>
+      <p>Map Type: Roadmap</p>
+      
+      <div class="toggle-section">
+        <button 
+          pButton 
+          type="button" 
+          [label]="showCard ? 'Hide Details' : 'Show Details'" 
+          class="p-button-sm full-width"
+          (click)="toggleCard()">
+        </button>
+      </div>
+      
+      <div class="card-container" *ngIf="showCard">
+        <p-card header="Location Details" class="info-card">
+          <div class="card-content">
+            <h5>Coordinates</h5>
+            <p>Latitude: 40.7128</p>
+            <p>Longitude: -74.0060</p>
+            
+            <h5>Weather</h5>
+            <p>Temperature: 72°F</p>
+            <p>Conditions: Partly Cloudy</p>
+            
+            <h5>Nearby</h5>
+            <ul>
+              <li>Central Park - 2.1 miles</li>
+              <li>Times Square - 1.8 miles</li>
+              <li>Brooklyn Bridge - 3.2 miles</li>
+            </ul>
+          </div>
+          
+          <ng-template pTemplate="footer">
+            <button pButton type="button" class="p-button-sm p-button-outlined">Get Directions</button>
+          </ng-template>
+        </p-card>
+      </div>
+      
+      <h4>Recent Searches</h4>
+      <div class="search-history">
+        <div class="search-item">Central Park</div>
+        <div class="search-item">Empire State Building</div>
+        <div class="search-item">Statue of Liberty</div>
+      </div>
+
+      <h4>Recent Searches</h4>
+      <div class="search-history">
+        <div class="search-item">Central Park</div>
+        <div class="search-item">Empire State Building</div>
+        <div class="search-item">Statue of Liberty</div>
+      </div>
+    </div>
+  </p-panel>
+  

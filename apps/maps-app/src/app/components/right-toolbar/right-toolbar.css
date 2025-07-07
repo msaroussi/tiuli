@@ -1,0 +1,71 @@
+.toolbar-container {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(128, 128, 128, 0.9);
+  border-right: 1px solid #e0e0e0;
+  box-shadow: 2px 0 4px rgba(0, 0, 0, 0.1);
+}
+
+.toolbar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 8px 4px;
+  gap: 4px;
+}
+
+.toolbar-btn {
+  width: 40px !important;
+  height: 40px !important;
+  min-width: 40px !important;
+  border-radius: 6px !important;
+  margin: 2px 0 !important;
+  color: #333 !important;
+  background: rgba(255, 255, 255, 0.5) !important;
+  border: 1px solid transparent !important;
+  transition: all 0.2s ease !important;
+}
+
+.toolbar-btn:hover {
+  background: #f5f5f5 !important;
+  border-color: #ddd !important;
+  color: #2196F3 !important;
+}
+
+.toolbar-btn:active,
+.toolbar-btn.p-button-text:not(:disabled):active {
+  background: #e3f2fd !important;
+  border-color: #2196F3 !important;
+  color: #1976D2 !important;
+}
+
+.toolbar-btn:focus {
+  box-shadow: 0 0 0 2px rgba(33, 150, 243, 0.2) !important;
+}
+
+.toolbar-btn.toggle-btn.active {
+  background: #2196F3 !important;
+  color: #ffffff !important;
+  border-color: #1976D2 !important;
+}
+
+.toolbar-btn.toggle-btn.active:hover {
+  background: #1976D2 !important;
+  color: #ffffff !important;
+}
+
+.toolbar-separator {
+  width: 30px;
+  height: 1px;
+  background: #e0e0e0;
+  margin: 8px 0;
+}
+
+.toolbar-btn .pi {
+  font-size: 16px;
+}
+
+/* Tooltip styling */
+.p-tooltip {
+  font-size: 12px;
+} 

@@ -1,0 +1,23 @@
+<div class="map-page">
+  <!-- Top bar spanning full width -->
+  <div class="top-bar">
+    <app-top-bar></app-top-bar>
+  </div>
+  
+  <!-- Content area with left-bar, map, and right-bar -->
+  <div class="content-area">
+    <div class="left-bar">
+      <app-left-bar></app-left-bar>
+    </div>
+    
+    <app-map></app-map>
+    
+    <div class="right-bar" *ngIf="rightBarVisible">
+      <app-right-bar></app-right-bar>
+    </div>
+    
+    <div class="right-toolbar" [class.expanded]="!rightBarVisible">
+      <app-right-toolbar></app-right-toolbar>
+    </div>
+  </div>
+</div>

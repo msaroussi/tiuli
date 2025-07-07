@@ -1,0 +1,119 @@
+<div class="toolbar-container">
+  <div class="toolbar">
+    <!-- Analysis Tools -->
+    <button pButton 
+            type="button" 
+            icon="pi pi-chart-bar" 
+            class="p-button-text toolbar-btn"
+            pTooltip="Analytics"
+            tooltipPosition="left">
+    </button>
+    
+    <button pButton 
+            type="button" 
+            icon="pi pi-calculator" 
+            class="p-button-text toolbar-btn"
+            pTooltip="Calculate"
+            tooltipPosition="left">
+    </button>
+    
+    <button pButton 
+            type="button" 
+            icon="pi pi-chart-line" 
+            class="p-button-text toolbar-btn"
+            pTooltip="Reports"
+            tooltipPosition="left">
+    </button>
+    
+    <button pButton 
+            type="button" 
+            icon="pi pi-bookmark" 
+            class="p-button-text toolbar-btn"
+            pTooltip="Bookmarks"
+            tooltipPosition="left">
+    </button>
+    
+    <div class="toolbar-separator"></div>
+    
+    <!-- Export Tools -->
+    <button pButton 
+            type="button" 
+            icon="pi pi-download" 
+            class="p-button-text toolbar-btn"
+            pTooltip="Export"
+            tooltipPosition="left">
+    </button>
+    
+    <button pButton 
+            type="button" 
+            icon="pi pi-print" 
+            class="p-button-text toolbar-btn"
+            pTooltip="Print"
+            tooltipPosition="left">
+    </button>
+    
+    <button pButton 
+            type="button" 
+            icon="pi pi-share-alt" 
+            class="p-button-text toolbar-btn"
+            pTooltip="Share"
+            tooltipPosition="left">
+    </button>
+    
+    <div class="toolbar-separator"></div>
+    
+    <!-- View Tools -->
+    <button pButton 
+            type="button" 
+            icon="pi pi-image" 
+            class="p-button-text toolbar-btn"
+            pTooltip="Screenshot"
+            tooltipPosition="left">
+    </button>
+    
+    <button pButton 
+            type="button" 
+            icon="pi pi-window-maximize" 
+            class="p-button-text toolbar-btn"
+            pTooltip="Fullscreen"
+            tooltipPosition="left">
+    </button>
+    
+    <button pButton 
+            type="button" 
+            icon="pi pi-expand" 
+            class="p-button-text toolbar-btn"
+            pTooltip="Zoom to Fit"
+            tooltipPosition="left">
+    </button>
+    
+    <div class="toolbar-separator"></div>
+    
+    <!-- Panel Toggle & Settings -->
+    <button pButton 
+            type="button" 
+            [icon]="toggleIcon"
+            class="p-button-text toolbar-btn toggle-btn"
+            [class.active]="rightBarVisible"
+            [pTooltip]="toggleTooltip"
+            tooltipPosition="left"
+            (click)="toggleRightBar()">
+    </button>
+    
+    <button pButton 
+            type="button" 
+            icon="pi pi-cog" 
+            class="p-button-text toolbar-btn"
+            pTooltip="Settings"
+            tooltipPosition="left">
+    </button>
+    
+    <button pButton 
+            type="button" 
+            icon="pi pi-question-circle" 
+            class="p-button-text toolbar-btn"
+            pTooltip="Help"
+            tooltipPosition="left">
+    </button>
+  </div>
+</div> 
