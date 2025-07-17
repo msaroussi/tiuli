@@ -3,9 +3,22 @@
   <div class="top-bar">
     <app-top-bar></app-top-bar>
   </div>
+
+  <!-- P-Dock with text buttons -->
+  <p-dock [model]="dockItems" [position]="dockPosition">
+    <ng-template pTemplate="item" let-item>
+      <button pButton 
+              type="button" 
+              class="p-button-text" 
+              (click)="item.command()">
+        {{item.label}}
+      </button>
+    </ng-template>
+  </p-dock>
   
   <!-- Content area with left-bar, map, and right-bar -->
   <div class="content-area">
+
     <div class="left-bar">
       <app-left-bar></app-left-bar>
     </div>

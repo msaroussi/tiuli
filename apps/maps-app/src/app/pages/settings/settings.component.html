@@ -1,2 +1,8 @@
 <p>settings works!</p>
-<button pButton type="button" routerLink="/map" class="p-button-text toolbar-btn">Back to Map</button>
+<p-dock [model]="dockItems" [position]="dockPosition" [dt]="dockDesignTokens">
+    <ng-template pTemplate="item" let-item>
+        <button pButton type="button" (click)="onItemClick(item)" class="p-button-text toolbar-btn">
+            {{item.label}}
+        </button>
+    </ng-template>
+</p-dock>

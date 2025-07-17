@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { RouterTestingModule } from '@angular/router/testing';
+import { provideRouter } from '@angular/router';
 import { PanelModule } from 'primeng/panel';
 import { ButtonModule } from 'primeng/button';
 import { Toolbar } from 'primeng/toolbar';
@@ -13,11 +13,11 @@ describe('TopBar', () => {
     await TestBed.configureTestingModule({
       imports: [
         TopBar,
-        RouterTestingModule,
         PanelModule,
         ButtonModule,
         Toolbar
       ],
+      providers: [provideRouter([])]
     }).compileComponents();
 
     fixture = TestBed.createComponent(TopBar);

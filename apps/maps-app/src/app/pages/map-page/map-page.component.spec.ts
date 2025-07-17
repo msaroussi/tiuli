@@ -2,7 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { CommonModule } from '@angular/common';
 import { BehaviorSubject } from 'rxjs';
 import { provideNoopAnimations } from '@angular/platform-browser/animations';
-import { RouterTestingModule } from '@angular/router/testing';
+import { provideRouter } from '@angular/router';
 import { GoogleMapsModule } from '@angular/google-maps';
 import { PanelModule } from 'primeng/panel';
 import { CardModule } from 'primeng/card';
@@ -37,7 +37,6 @@ describe('MapPageComponent', () => {
       imports: [
         MapPageComponent,
         CommonModule,
-        RouterTestingModule,
         GoogleMapsModule,
         PanelModule,
         CardModule,
@@ -52,7 +51,8 @@ describe('MapPageComponent', () => {
       ],
       providers: [
         { provide: PanelToggleService, useValue: mockPanelToggleService },
-        provideNoopAnimations()
+        provideNoopAnimations(),
+        provideRouter([])
       ]
     }).compileComponents();
 

@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { CommonModule } from '@angular/common';
-import { RouterTestingModule } from '@angular/router/testing';
+import { provideRouter } from '@angular/router';
 import { ButtonModule } from 'primeng/button';
 import { SettingsComponent } from './settings.component';
 
@@ -13,9 +13,9 @@ describe('SettingsComponent', () => {
       imports: [
         SettingsComponent,
         CommonModule,
-        RouterTestingModule,
         ButtonModule
       ],
+      providers: [provideRouter([])]
     }).compileComponents();
 
     fixture = TestBed.createComponent(SettingsComponent);

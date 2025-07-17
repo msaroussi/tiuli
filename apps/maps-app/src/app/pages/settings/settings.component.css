@@ -1,3 +1,31 @@
+/* P-Dock theme customization using design tokens */
+:host ::ng-deep .p-dock {
+  --p-dock-background: rgba(255, 255, 255, 0.9);
+  --p-dock-border-color: rgba(0, 0, 0, 0.1);
+  --p-dock-border-radius: 12px;
+  --p-dock-item-size: 3rem;
+  --p-dock-item-border-radius: 8px;
+}
+
+:host ::ng-deep .p-dock-item {
+  --p-dock-item-background: transparent;
+  --p-dock-item-background-hover: rgba(0, 0, 0, 0.05);
+  --p-dock-item-background-active: rgba(0, 0, 0, 0.1);
+  --p-dock-item-color: var(--p-text-color);
+  --p-dock-item-color-hover: var(--p-primary-color);
+}
+
+/* Dark mode support */
+:host-context(.dark-mode) ::ng-deep .p-dock {
+  --p-dock-background: rgba(30, 30, 30, 0.9);
+  --p-dock-border-color: rgba(255, 255, 255, 0.1);
+}
+
+:host-context(.dark-mode) ::ng-deep .p-dock-item {
+  --p-dock-item-background-hover: rgba(255, 255, 255, 0.05);
+  --p-dock-item-background-active: rgba(255, 255, 255, 0.1);
+}
+
 /* Toolbar button styling to match other components */
 .toolbar-btn {
   height: 40px !important;

@@ -1,6 +1,5 @@
 <p-toolbar class="top-toolbar" dir="rtl">
   <ng-template #start>
-    <img src="/assets/images/logo.svg" alt="Tiuli Logo" style="width: 2rem; margin-right: 1rem">
     <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg" style="width: 2rem; margin-right: 1rem">
       <path d="M15.1934 0L0.0391235 5.38288L2.35052 25.3417L15.1934 32.427L28.0364 25.3417L30.3478 5.38288L15.1934 0Z" fill="#2196F3"/>
       <circle cx="15.1934" cy="16" r="8" fill="#ffffff"/>
@@ -8,11 +7,12 @@
     </svg>
     <span class="toolbar-title">Tiuli</span>
   </ng-template>
-  <ng-template #center></ng-template>
+  <ng-template #center>
+    <span>center</span>
+  </ng-template>
   <ng-template #end>
-    <button pButton type="button" class="p-button-text toolbar-btn">Search</button>
-    <button pButton type="button" class="p-button-text toolbar-btn">Layers</button>
-    <button pButton type="button" routerLink="/settings" class="p-button-text toolbar-btn">Settings</button>
-    <button pButton type="button" routerLink="/map" class="p-button-text toolbar-btn">Map</button>
+    <button pButton type="button" class="p-button-text toolbar-btn" (click)="toggleDock()">
+      {{dockPosition}}
+    </button>
   </ng-template>
 </p-toolbar>
